@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import DeckGL from '@deck.gl/react';
-import { ScatterplotLayer } from '@deck.gl/layers';
-import { HeatmapLayer } from '@deck.gl/aggregation-layers';
+import DeckGL, { ScatterplotLayer, HeatmapLayer } from 'deck.gl';
 import Map from 'react-map-gl/maplibre';
 import { createClient } from '@supabase/supabase-js';
 
