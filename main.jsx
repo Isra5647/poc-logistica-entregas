@@ -50,7 +50,7 @@ function App() {
 
   const mapaBase = new TileLayer({
     id: 'mapa-base',
-    data: 'https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+    data: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     minZoom: 0,
     maxZoom: 19,
     tileSize: 256,
@@ -121,6 +121,7 @@ function App() {
           layers={[mapaBase, capa === 'puntos' ? capaPuntos : capaCalor]}
           getTooltip={tooltip}
         />
+        <div className="attr">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a></div>
         {cargando && <div className="msg">Cargando datos desde Supabase…</div>}
         {error && <div className="msg">Error al leer Supabase: {error}</div>}
       </div>
